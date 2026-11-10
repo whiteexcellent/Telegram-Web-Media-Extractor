@@ -48,4 +48,9 @@ Scan the same chat again. Under **ZIP → Retry failed items**, import the previ
 
 An independent extension for Telegram Web K and A.
 
+## License
+
+The extension is released under the [MIT License](LICENSE).
+Exported media and third-party trademarks remain subject to their respective rights.
+
 <sub>Built with AI assistance.</sub>
