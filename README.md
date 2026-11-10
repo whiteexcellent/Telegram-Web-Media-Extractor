@@ -16,12 +16,12 @@
   <img src="docs/screenshots/zip-export.png" width="225" alt="Media Extractor popup showing the ZIP export summary">
 </p>
 
-Screenshots show the actual Brave extension popup with a synthetic sample chat. The logo, media illustration, and ZIP illustration were created with OpenAI ImageGen. The screenshots use the same assets shipped with the extension.
+Screenshots show the actual extension popup with a synthetic sample chat and the artwork shipped with the extension.
 
-## Install in Brave, Chrome, or Edge
+## Install in Google Chrome
 
 1. Clone this repository or choose **Code → Download ZIP**, then extract it.
-2. Open the browser's **Extensions** page and enable **Developer mode**.
+2. Open `chrome://extensions` and enable **Developer mode**.
 3. Select **Load unpacked** and choose the folder containing `manifest.json`.
 4. Refresh Telegram Web if it was already open, then open the chat you want to scan.
 
@@ -47,3 +47,5 @@ Scan the same chat again. Under **ZIP → Retry failed items**, import the previ
 - ZIP files use ZIP32. Very large exports can hit size, entry-count, or browser memory limits.
 
 An independent extension for Telegram Web K and A.
+
+<sub>Built with AI assistance.</sub>
