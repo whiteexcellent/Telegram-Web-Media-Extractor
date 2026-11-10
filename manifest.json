@@ -1,0 +1,72 @@
+{
+  "manifest_version": 3,
+  "name": "Telegram Media Extractor",
+  "version": "1.2.11",
+  "description": "Extract and bulk download photos, videos, and GIFs from Telegram Web as ZIP",
+  "permissions": [
+    "activeTab",
+    "downloads",
+    "storage",
+    "offscreen"
+  ],
+  "host_permissions": [
+    "*://web.telegram.org/*"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://web.telegram.org/*"
+      ],
+      "js": [
+        "modules/media-response.js",
+        "modules/media-parser.js",
+        "modules/duplicate-detector.js",
+        "modules/media-detector.js",
+        "modules/chat-scanner.js",
+        "content.js"
+      ],
+      "css": [],
+      "run_at": "document_idle",
+      "all_frames": false
+    },
+    {
+      "matches": [
+        "*://web.telegram.org/*"
+      ],
+      "js": [
+        "modules/media-response.js",
+        "modules/photo-fingerprint.js",
+        "modules/media-cache.js",
+        "inject.js"
+      ],
+      "run_at": "document_start",
+      "world": "MAIN",
+      "all_frames": false
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "assets/icons/icon16.png",
+      "32": "assets/icons/icon32.png",
+      "48": "assets/icons/icon48.png",
+      "128": "assets/icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "assets/icons/icon16.png",
+    "32": "assets/icons/icon32.png",
+    "48": "assets/icons/icon48.png",
+    "128": "assets/icons/icon128.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["inject.js"],
+      "matches": ["*://web.telegram.org/*"]
+    }
+  ]
+}

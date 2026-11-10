@@ -1,0 +1,22 @@
+# Local browser, export, and recovery data
+*.log
+*.har
+*.zip
+*.crdownload
+recovery-targets.json
+retry-manifest*.json
+**/Metadata/manifest.json
+Telegram_Export*/
+Telegram_Recovery*/
+browser-profile*/
+.env*
+
+# Editor and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Local browser test output
+.playwright-cli/
+output/playwright/
